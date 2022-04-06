@@ -17,6 +17,10 @@
     text-decoration: none;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* HEADER*/
 
 .header {
@@ -27,6 +31,8 @@
     font-family: var(--main-font);
     background-color: var(--main-black);
     border-bottom: 0.4px solid #00b37794;
+    width: 100%;
+    position: fixed;
   }
   
 .header-icon {
@@ -80,8 +86,7 @@
  .welcome-text-title {
     font-family: 'Montserrat', Roboto;
     font-size: 64px;
-    background-image: linear-gradient(90deg, #05ca89 0%, #00b376 100%);
-    color: var(--main-green);
+    background-image: linear-gradient(90deg, #1efdb3 0%, #00b376 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -107,7 +112,7 @@
   font-family: 'Montserrat', Roboto;
   font-size: 24px;
   cursor: pointer;
-  background-image: -webkit-linear-gradient(90deg, #05ca89 0%, #00b376 100%);
+  background-image: linear-gradient(90deg, #1efdb3 0%, #00b376 100%);
   border: 0;
   border-radius: 50px;
   font-weight: bold;
@@ -128,17 +133,13 @@
   width: 45%;
   flex-grow: 0.1;
   padding: 0px 46px 24px 0px;
-  
-  
-  
-  
-
 }
 
 /*PROJECT SECTION*/
 
 .projects-section {
-  background: linear-gradient(180deg, #00b376 0%, #00b376 100%);
+  background: linear-gradient(90deg, #1efdb3 0%, #00b376 100%);
+  
 }
 
 .projects-section-title {
@@ -220,10 +221,21 @@
 
 .about-me-text h3 {
   font-size: 250%;
+  background-image: linear-gradient(90deg, #1efdb3 0%, #00b376 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .about-me-text p {
   margin-top: 8px;
+}
+
+.tech-text h3 {
+    background-image: linear-gradient(90deg, #1efdb3 0%, #00b376 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .tech-text p {
@@ -246,7 +258,7 @@
 .contact-section {
   display: flex;
   flex-direction: row;
-  background-color: var(--main-green);
+  background: linear-gradient(90deg, #1efdb3 0%, #00b376 100%);
 }
 
 
@@ -255,10 +267,11 @@
   flex-direction: column;
   align-items: flex-start;
   margin-left: 120px;
+  width: 100%;
 }
 
 .contact-section-title {
-  padding-top: 15%;
+  padding-top: 72px;
   font-family: 'Montserrat', Roboto;
   font-size: 250%;
   color: var(--main-black);
@@ -270,9 +283,12 @@
 
 .contact-section-paragraph {
   padding-top: 4%;
+  display: inline;
   font-family: 'Montserrat', Roboto;
   font-size: 125%;
-  color: var(--main-black)
+  color: var(--main-black);
+  width: 100%;
+  
 }
 
 .contact-section-links {
@@ -289,7 +305,7 @@
 
 .contact-images {
   padding-top: 6px;  
-  width: 100%;
+  width: 125%;
 }
 
 .form-label {
@@ -304,6 +320,7 @@
 
 .form-field input {
   font-family: 'Montserrat', Roboto;
+  color: var(--main-black);
   font-weight: bold;
   padding: 16px;
   width: 100%;
@@ -333,12 +350,13 @@
 }
 
 .form-wrapper {
-  margin: 72px 8px;
+  margin: 72px auto;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 52px;
-  flex-grow: 1;
+  width: 100%;
+  
 }
 
 .form-wrapper p {
@@ -369,7 +387,223 @@
   align-items: center;
   justify-content: center;
   font-family: var(--main-font);
-  background-color: var(--main-green);
+  background: linear-gradient(90deg, #1efdb3 0%, #00b376 100%);
   color: var(--main-black);
   border-top: 0.4px solid #1a1b1d4d;
+}
+
+
+/*MOBILE VERSION*/
+
+@media (max-width: 768px){
+
+/*MOBILE HEADER*/
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px;
+}
+
+.header-icon {
+  display: none;
+}
+
+/*MOBILE WELCOME SECTION*/
+
+.welcome-section { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 102px 0px 0px 0px;
+}
+
+.welcome-text-title {
+  font-size: 48px;
+
+}
+
+.welcome-text-title2 {
+  font-size: 48px;
+}
+
+.welcome-text-subtitle {
+font-size: 16px;
+}
+
+.welcome-text-button {
+font-size: 16px;
+font-weight: bold;
+border-radius: 5px;
+width: 240px;
+
+}
+
+.welcome-text a {
+  width: 240px;
+}
+
+.welcome-text-button:hover {
+color: var(--main-black);
+}
+
+.welcome-section-img {
+width: 90%;
+padding: 0px 0px 36px 0px;
+}
+
+
+/* MOBILE PROJECTS SECTION*/
+
+.projects-section-title {
+  padding: 32px 16px 32px 16px;
+  text-align: center;
+  font-size: 36px;
+}
+
+.projects-grid {
+  padding-bottom: 52px;
+}
+
+/*MOBILE ABOUT ME SECTION*/
+
+.about-me-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  margin: 64px auto 24px auto;
+  width: 50%;
+}
+
+.about-me-section-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px;
+  text-align: center;
+}
+
+.tech-text p {
+  margin-top: 8px;
+}
+
+.tech-images {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  gap: 16px;
+}
+
+.tech-logo {
+  width: 15%;
+  margin-bottom: 48px;
+}
+
+/*MOBILE CONTACT SECTION*/
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact-section-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  padding: 24px 24px;
+  width: 100%;
+}
+
+.contact-section-title {
+  font-size: 48px;
+  padding-top: 16px;
+}
+
+.contact-section-title2 {
+  font-size: 48px;
+}
+
+.contact-section-paragraph {
+  font-size: 20px;
+  text-align: justify;
+}
+
+
+.contact-section-links {
+  padding-top: 16px;
+  margin-left: -12px;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.contact-section-links a {
+  width: 35px;
+  height: 42px;
+}
+
+.contact-images {
+  width: 125%;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 16px 24px;
+  width: 100%;
+}
+
+.contact {
+  width: 100%;
+}
+
+.form-field {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.form-field input {
+  width: 100%;
+}
+
+.submit-button {
+  border-radius: 4px;
+  padding: 12px 24px 12px 24px;
+  width: 100%;
+  color: var(--main-white);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+/*MOBILE FOOTER SECTION*/
+
+/*FOOTER SECTION*/
+  .footer-section{
+  
+    width: 100%;
+
+  }
 }
