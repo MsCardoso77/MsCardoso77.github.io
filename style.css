@@ -1,139 +1,375 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+
+
 :root {
     --main-white: #e4e4e7;
     --main-green: #00b376;
     --main-black: #1a1b1d;
-    --main-font: 'Poppins', sans-serif;
+    --main-font: 'Roboto', sans-serif;
   }
 
 * {
     margin: 0;
     padding: 0;
-}
-
-
-html {
     box-sizing: border-box;
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-  }
-
-  /* 1200px / 16px = 75em */
-@media (max-width: 75em) {
-    html {
-      font-size: 60%;
-    }
-  }
-  
-  /* 980px / 16px = 61.25em */
-@media (max-width: 61.25em) {
-    html {
-      font-size: 58%;
-    }
-  }
-  
-  /* 460px / 16px = 28.75em */
-@media (max-width: 28.75em) {
-    html {
-      font-size: 55%;
-    }
-  }
-
-.topnav {
-    position: fixed;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: var(--main-black);
-    overflow: hidden;
-    padding-left: 140px;
-  }
-  
-.topnav a {
-    float: left;
-    display: block;
-    color: var(--main-white);
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+}
+
+/* HEADER*/
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-family: var(--main-font);
+    background-color: var(--main-black);
+    border-bottom: 0.4px solid #00b37794;
+  }
+  
+.header-icon {
+  margin-right: 520px;
+}
+
+.header-image {
+    padding-top: 6px;  
+    width: 60%;
+  }
+
+.header-menu {
+    display: flex;
+    gap: 50px;
+}
+
+.header-menu-item {
+  font-family: var(--main-font);
+  color: var(--main-white);
+  font-weight: 600;
+  font-size: 80%;
+
 }
   
-.topnav a:hover {
+.header-menu a:hover {
     background-color: var(--main-black);
     color: var(--main-green);
 }
-  
-  /* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-    display: none;
-}
 
-.welcome-section {
+/*WELCOME SECTION*/
+
+.welcome-section { 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: var(--main-black);
+    
 }
 
 .welcome-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-right: 60px;
-
+    align-items: left;
+    padding-bottom: 24px;
+    padding-left: 46px;
+    
+    
  }
 
-.welcome-text > p {
-    font-size: 3rem;
-    font-weight: 200;
-    font-style: italic;
-    color: var(--main-white);
+ .welcome-text-title {
+    font-family: 'Montserrat', Roboto;
+    font-size: 64px;
+    background-image: linear-gradient(90deg, #05ca89 0%, #00b376 100%);
+    color: var(--main-green);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ }
+
+ .welcome-text-title2 {
+  font-family: 'Montserrat', Roboto;
+  font-size: 64px;
+  margin-top: -2%;
+  margin-bottom: 2%;
+  color: var(--main-white);
 }
 
-.welcome-section > img {
-    width: 32%;
+.welcome-text-subtitle {
+  font-family: 'Montserrat', Roboto;
+  font-weight: 100;
+  font-size: 24px;
+  margin-bottom: 5%;
+  color: var(--main-white);
 }
+
+.welcome-text-button {
+  font-family: 'Montserrat', Roboto;
+  font-size: 24px;
+  cursor: pointer;
+  background-image: -webkit-linear-gradient(90deg, #05ca89 0%, #00b376 100%);
+  border: 0;
+  border-radius: 50px;
+  font-weight: bold;
+  padding: 12px 24px 12px 24px;
+  color: var(--main-white);
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.welcome-text a {
+  width: 144px;
+}
+
+.welcome-text-button:hover {
+  color: var(--main-black);
+}
+
+.welcome-section-img {
+  width: 45%;
+  flex-grow: 0.1;
+  padding: 0px 46px 24px 0px;
+  
+  
+  
+  
+
+}
+
+/*PROJECT SECTION*/
 
 .projects-section {
-    color: var(--main-black);
-    text-align: center;
-    padding: 10rem 2rem;
-    background-color: var(--main-white);
-  }
+  background: linear-gradient(180deg, #00b376 0%, #00b376 100%);
+}
+
+.projects-section-title {
+  padding-top: 4%;
+  font-family: 'Montserrat', Roboto;
+  text-align: center;
+  font-size: 250%;
+  color: var(--main-white);
+}
+
+.projects-grid {
+  padding: 4% 7% 4% 7%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
   
-  .projects-section-header {
-    max-width: 640px;
-    margin: 0 auto 6rem auto;
-    border-bottom: 0.2rem solid var(--main-green);
-  }
-
-  .contact-section {
-    color: var(--main-white);
-    text-align: center;
-    padding: 10rem 2rem;
-    background-color: var(--main-green);
-  }
-
-body {
-    font-family: var(--main-font);
-    font-size: 1.8rem; /* 18px */
-    font-weight: 400;
-    line-height: 1.4;
-    color: var(--main-green);
 }
 
-h1,
-h2 {
-    font-family: var(--main-font);
-    font-weight: 700;
-    text-align: center;
+.project{
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
 }
 
-h1 {
-    font-size: 6rem;
-}
+.project-image {
+  height: 20rem;
+  width: 20rem;
+  object-fit: cover;
   
-h2 {
-    font-size: 4.2rem;
+}
+
+.project-title {
+  font-family: 'Montserrat', Roboto;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem 0rem 1rem 0rem;
+  margin-top: -0.5rem; 
+  color: var(--main-white);
+  background-color: var(--main-black);
+  
+}
+
+.code {
+  color: var(--main-black);
+  transition: color 0.4s ease-out;
+}
+
+.project:hover .code {
+  color: var(--main-green);
 }
 
 
+/*ABOUT ME SECTION*/
+
+.about-me-section {
+  display: flex;
+  background-color: var(--main-black);
+  align-items: center;
+}
+
+.profile-img {
+  margin: 46px 46px 46px 120px;
+  width: 20%;
+  border-radius: 10px;
+  box-shadow: 4px 5px 4px 4px rgba(0, 0, 0, 0.25);
+  flex-grow: 1;
+}
+
+.about-me-section-text {
+  display: flex;
+  flex-direction: column;
+  margin: 46px 120px 46px 8px;
+  gap: 24px;
+  font-family: 'Montserrat', Roboto;
+  color: var(--main-white);
+  flex-grow: 0.2;
+}
+
+
+.about-me-text h3 {
+  font-size: 250%;
+}
+
+.about-me-text p {
+  margin-top: 8px;
+}
+
+.tech-text p {
+  margin-top: 8px;
+}
+
+.tech-images {
+  display: flex;
+  margin-left: -4px;
+  gap: 16px;
+}
+
+.tech-logo {
+  width: 8%;
+}
+
+
+/*CONTACT SECTION*/
+
+.contact-section {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--main-green);
+}
+
+
+.contact-section-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 120px;
+}
+
+.contact-section-title {
+  padding-top: 15%;
+  font-family: 'Montserrat', Roboto;
+  font-size: 250%;
+  color: var(--main-black);
+}
+
+.contact-section-title2 {
+  color: var(--main-black);
+}
+
+.contact-section-paragraph {
+  padding-top: 4%;
+  font-family: 'Montserrat', Roboto;
+  font-size: 125%;
+  color: var(--main-black)
+}
+
+.contact-section-links {
+  padding-top: 4%;
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+}
+
+.contact-section-links a {
+  width: 35px;
+  height: 42px;
+}
+
+.contact-images {
+  padding-top: 6px;  
+  width: 100%;
+}
+
+.form-label {
+  display: none;
+}
+
+.form-field {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.form-field input {
+  font-family: 'Montserrat', Roboto;
+  font-weight: bold;
+  padding: 16px;
+  width: 100%;
+  outline: none;
+  border-radius: 4px;
+  border: 0;
+}
+
+.form-field textarea {
+  font-family: 'Montserrat', Roboto;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 16px;
+  width: 100%;
+  outline: 0;
+  border-radius: 4px;
+  border: 0;
+  resize: none;
+  margin: 0;
+}
+
+.contact {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-wrapper {
+  margin: 72px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 52px;
+  flex-grow: 1;
+}
+
+.form-wrapper p {
+  font-family: 'Montserrat', Roboto;
+  color: var(--main-green);
+}
+
+.submit-button {
+  font-family: 'Montserrat', Roboto;
+  cursor: pointer;
+  background-color: var(--main-black);
+  border: 0;
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 12px 24px 12px 24px;
+  color: var(--main-white);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25)
+}
+
+
+
+/*FOOTER SECTION*/
+
+.footer-section {
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--main-font);
+  background-color: var(--main-green);
+  color: var(--main-black);
+  border-top: 0.4px solid #1a1b1d4d;
+}
