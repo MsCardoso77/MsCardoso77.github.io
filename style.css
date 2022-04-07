@@ -17,6 +17,10 @@
     text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -51,6 +55,7 @@ body {
 
 .header-menu-item {
   font-family: var(--main-font);
+  text-align: center;
   color: var(--main-white);
   font-weight: 600;
   font-size: 80%;
