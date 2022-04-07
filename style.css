@@ -90,6 +90,7 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    flex-grow: 0.1;
  }
 
  .welcome-text-title2 {
