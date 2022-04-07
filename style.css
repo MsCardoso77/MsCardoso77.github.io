@@ -370,6 +370,11 @@ body {
   color: var(--main-black);
 }
 
+/* .required:after {
+  content:" *"; 
+  color: var(--main-black);
+} */
+
 .submit-button {
   font-family: 'Montserrat', Roboto;
   cursor: pointer;
