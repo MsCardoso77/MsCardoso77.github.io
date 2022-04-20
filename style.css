@@ -154,7 +154,7 @@ body {
   font-family: 'Montserrat', Roboto;
   text-align: center;
   font-size: 250%;
-  color: var(--main-white);
+  color: var(--main-black);
 }
 
 .projects-grid {
