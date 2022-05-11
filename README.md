@@ -1,8 +1,8 @@
 # Portfolio - Matheus Soares
 
-!(https://i.ibb.co/qBLjsWV/mscardoso77-portfolio.png)
-
 My name is Matheus Soares and this is my portfolio. Here I tell you a little about myself and my experience and some of the projects I developed.
+
+![Portfolio](images/mscardoso77%20-%20portfolio.png 'portfolio image')
 
 This app is living on: https://mscardoso77.github.io/
 
